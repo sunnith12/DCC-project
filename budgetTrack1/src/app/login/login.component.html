@@ -1,0 +1,13 @@
+<div class="login-container">
+    <div class="logindiv">
+      <h1>Budget Tracker</h1>
+  
+      <input type="text" placeholder="Username" [(ngModel)]="username" />
+      <input type="password" placeholder="Password" [(ngModel)]="password" />
+  
+      <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+  
+      <button (click)="login()" class="sbt">Login</button>
+    </div>
+  </div>
+  

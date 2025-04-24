@@ -1,0 +1,20 @@
+<amplify-authenticator>
+  <ng-template amplifySlot="authenticated" let-user="user" let-signOut="signOut">
+    <header class="navbar">
+      <div class="navbar-left">
+        <h2 class="app-title">Welcome to Budget Tracker</h2>
+        <nav class="nav-links">
+          <button (click)="loginin()">Dashboard</button>
+          <button (click)="expense()">Add Expense</button>
+        </nav>
+      </div>
+      <div class="navbar-right">
+        <button class="sign-out-button" (click)="signOut()">Sign Out</button>
+      </div>
+    </header>
+
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+  </ng-template>
+</amplify-authenticator>
